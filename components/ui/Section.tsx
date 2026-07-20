@@ -41,7 +41,7 @@ export default function Section({
   return (
     <section
       className={cn(
-        "relative"
+        "relative",
         backgroundClasses[background],
         spacingClasses[spacing],
         className
