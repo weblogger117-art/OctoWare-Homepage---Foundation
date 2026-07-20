@@ -14,6 +14,7 @@ export default function BackgroundDecoration({
   return (
     <div
       aria-hidden="true"
+      data-variant={variant}
       className={cn(
         "pointer-events-none absolute inset-0 overflow-hidden",
         className
