@@ -20,6 +20,8 @@ export default function BackgroundDecoration({
         className
       )}
     >
+      {variant === "glow" && (
+      <>
       {/* linke Lichtfläche */}
 
       <div
@@ -51,7 +53,10 @@ export default function BackgroundDecoration({
         blur-3xl
         "
       />
+  </>
+)}
 
+    
       {/* Raster */}
 
       <div
