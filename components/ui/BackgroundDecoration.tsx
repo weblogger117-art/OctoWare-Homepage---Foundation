@@ -1,10 +1,14 @@
 import { cn } from "@/lib/utils";
 
+import type { SectionDecoration } from "./Section";
+
 type BackgroundDecorationProps = {
+  variant: Exclude<SectionDecoration, "none">;
   className?: string;
 };
 
 export default function BackgroundDecoration({
+  variant,
   className,
 }: BackgroundDecorationProps) {
   return (
