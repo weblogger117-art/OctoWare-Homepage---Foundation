@@ -2,13 +2,18 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
+import BackgroundDecoration from "./BackgroundDecoration";
 import Container from "./Container";
 
-import BackgroundDecoration from "./BackgroundDecoration";
+export type SectionBackground =
+  | "default"
+  | "surface"
+  | "primary";
 
-type SectionBackground = "default" | "surface" | "primary";
-
-type SectionSpacing = "md" | "lg" | "xl";
+export type SectionSpacing =
+  | "md"
+  | "lg"
+  | "xl";
 
 export type SectionDecoration =
   | "none"
