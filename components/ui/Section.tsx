@@ -18,11 +18,12 @@ export type SectionDecoration =
 
 type SectionProps = {
   children: ReactNode;
-  className?: string;
+
   background?: SectionBackground;
   spacing?: SectionSpacing;
-
   decoration?: SectionDecoration;
+
+  className?: string;
 };
 
 const backgroundClasses: Record<SectionBackground, string> = {
