@@ -7,6 +7,7 @@ import Platform from "@/components/sections/Platform";
 import OctoWareNET from "@/components/sections/OctoWareNET";
 import OctoWareTN from "@/components/sections/OctoWareTN";
 import Trust from "@/components/sections/Trust";
+import Process from "@/components/sections/Process";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
         <OctoWareNET />
         <OctoWareTN />
         <Trust />
+         <Process />
       </main>
 
       <Footer />
