@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/ui/Logo";
 
 import Container from "@/components/ui/Container";
 
@@ -10,12 +11,7 @@ export default function Footer() {
       <Container className="py-16">
         <div className="grid gap-12 md:grid-cols-3">
           <div>
-            <Link
-              href="/"
-              className="text-2xl font-bold tracking-tight"
-            >
-              <span className="italic">OctoWare</span>®Gesundheit
-            </Link>
+            <Logo />
 
             <p className="mt-4 text-sm text-[var(--color-text-light)]">
               Die moderne Plattform für den öffentlichen Gesundheitsdienst.
