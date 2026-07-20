@@ -1,17 +1,14 @@
+import Header from "@/components/layout/Header";
+import Hero from "@/components/sections/Hero";
+
 export default function HomePage() {
   return (
-    <main>
-      <section className="section">
-        <div className="container">
-          <h1>Digitalisierung für den öffentlichen Gesundheitsdienst.</h1>
+    <>
+      <Header />
 
-          <p>
-            OctoWare®Gesundheit vereint moderne Fachverfahren,
-            digitale Bürgerdienste und mobile Prozesse
-            auf einer zentralen Plattform.
-          </p>
-        </div>
-      </section>
-    </main>
+      <main>
+        <Hero />
+      </main>
+    </>
   );
 }
