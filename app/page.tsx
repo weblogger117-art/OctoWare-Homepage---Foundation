@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import WhyOctoWare from "@/components/sections/WhyOctoWare";
 import Statistics from "@/components/sections/Statistics";
 import Platform from "@/components/sections/Platform";
+import OctoWareNET from "@/components/sections/OctoWareNET";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         <Statistics />
         <WhyOctoWare />
          <Platform />
+        <OctoWareNET />
       </main>
 
       <Footer />
