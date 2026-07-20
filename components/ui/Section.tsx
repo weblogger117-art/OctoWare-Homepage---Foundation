@@ -16,7 +16,7 @@ type SectionProps = {
   background?: SectionBackground;
   spacing?: SectionSpacing;
 
-  decoration?: boolean;
+  decoration?: SectionDecoration;
 };
 
 const backgroundClasses: Record<SectionBackground, string> = {
@@ -36,6 +36,7 @@ export default function Section({
   className,
   background = "default",
   spacing = "lg"
+  decoration = "none",
 }: SectionProps) {
   return (
     <section
