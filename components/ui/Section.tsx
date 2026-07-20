@@ -44,6 +44,9 @@ export default function Section({
         className
       )}
     >
+       {decoration && (
+        <BackgroundDecoration />
+    )}
       <Container>{children}</Container>
     </section>
   );
