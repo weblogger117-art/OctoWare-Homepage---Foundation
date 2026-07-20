@@ -1,0 +1,45 @@
+:root {
+  /* ===== Brand Colors ===== */
+
+  --color-primary: #146ab1;
+  --color-primary-light: #c5d7ed;
+
+  --color-secondary: #adce00;
+  --color-secondary-light: #deeb99;
+
+  /* ===== Neutral Colors ===== */
+
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e5e7eb;
+
+  --color-text: #111827;
+  --color-text-light: #6b7280;
+
+  /* ===== Layout ===== */
+
+  --container-width: 1280px;
+
+  /* ===== Border Radius ===== */
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* ===== Shadows ===== */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.12);
+
+  /* ===== Motion ===== */
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 280ms ease;
+
+  /* ===== Header ===== */
+
+  --header-height: 92px;
+  --header-height-scrolled: 72px;
+}
