@@ -6,6 +6,7 @@ import Statistics from "@/components/sections/Statistics";
 import Platform from "@/components/sections/Platform";
 import OctoWareNET from "@/components/sections/OctoWareNET";
 import OctoWareTN from "@/components/sections/OctoWareTN";
+import Trust from "@/components/sections/Trust";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,7 @@ export default function HomePage() {
          <Platform />
         <OctoWareNET />
         <OctoWareTN />
+        <Trust />
       </main>
 
       <Footer />
