@@ -1,25 +1,33 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
+import { cn } from "@/lib/utils";
+
+type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
+
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
-  startIcon?: ReactNode;
-  endIcon?: ReactNode;
+  fullWidth?: boolean;
+  loading?: boolean;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
 };
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--color-primary)] text-white hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]",
+    "bg-[var(--color-primary)] text-white hover:bg-[#0f5b95]",
 
   secondary:
-    "bg-[var(--color-secondary)] text-black hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-secondary)]",
+    "bg-[var(--color-secondary)] text-black hover:brightness-95",
+
+  outline:
+    "border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white",
 
   ghost:
-    "bg-transparent border border-[var(--color-border)] hover:bg-[var(--color-surface)]"
+    "text-[var(--color-primary)] hover:bg-[var(--color-primary-light)]"
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -32,32 +40,32 @@ export default function Button({
   children,
   variant = "primary",
   size = "md",
-  startIcon,
-  endIcon,
-  className = "",
-  type = "button",
+  fullWidth = false,
+  loading = false,
+  disabled,
+  iconLeft,
+  iconRight,
+  className,
   ...props
 }: ButtonProps) {
   return (
     <button
-      type={type}
-      className={[
-        "inline-flex items-center justify-center gap-2",
-        "rounded-xl",
-        "font-medium",
-        "transition-all duration-200",
-        "cursor-pointer",
+      disabled={disabled || loading}
+      className={cn(
+        "inline-flex items-center justify-center gap-2 rounded-[var(--radius-md)] font-semibold transition-all duration-300",
+        "disabled:cursor-not-allowed disabled:opacity-50",
         variantClasses[variant],
         sizeClasses[size],
+        fullWidth && "w-full",
         className
-      ].join(" ")}
+      )}
       {...props}
     >
-      {startIcon}
+      {!loading && iconLeft}
 
-      <span>{children}</span>
+      {loading ? "Lädt..." : children}
 
-      {endIcon}
+      {!loading && iconRight}
     </button>
   );
 }
