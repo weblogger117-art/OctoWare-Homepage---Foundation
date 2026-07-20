@@ -1,29 +1,43 @@
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
-type CardProps = {
+import { cn } from "@/lib/utils";
+
+type CardVariant = "default" | "outlined" | "glass";
+
+type CardProps = HTMLAttributes<HTMLDivElement> & {
   children: ReactNode;
-  className?: string;
+  variant?: CardVariant;
+  hover?: boolean;
+};
+
+const variants: Record<CardVariant, string> = {
+  default:
+    "bg-white border border-[var(--color-border)] shadow-[var(--shadow-sm)]",
+
+  outlined:
+    "bg-white border-2 border-[var(--color-primary-light)]",
+
+  glass:
+    "border border-white/20 bg-white/70 backdrop-blur-xl shadow-[var(--shadow-md)]"
 };
 
 export default function Card({
   children,
-  className = ""
+  className,
+  variant = "default",
+  hover = true,
+  ...props
 }: CardProps) {
   return (
     <div
-      className={[
-        "rounded-[24px]",
-        "border",
-        "border-[var(--color-border)]",
-        "bg-white",
-        "p-8",
-        "shadow-sm",
-        "transition-all",
-        "duration-300",
-        "hover:-translate-y-1",
-        "hover:shadow-md",
+      className={cn(
+        "rounded-[var(--radius-lg)] p-8 transition-all duration-300",
+        variants[variant],
+        hover &&
+          "hover:-translate-y-1 hover:shadow-[var(--shadow-lg)]",
         className
-      ].join(" ")}
+      )}
+      {...props}
     >
       {children}
     </div>
