@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
 
 const navigation = [
   { label: "Start", href: "/" },
@@ -16,14 +17,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-xl">
       <Container className="flex h-[92px] items-center justify-between">
-        <Link
-          href="/"
-          className="text-2xl font-bold tracking-tight"
-          aria-label="Zur Startseite"
-        >
-          <span className="italic">OctoWare</span>®Gesundheit
-        </Link>
-
+       <Logo />
         <nav aria-label="Hauptnavigation">
           <ul className="flex items-center gap-8">
             {navigation.map((item) => (
