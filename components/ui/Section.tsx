@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 
 import Container from "./Container";
 
+import BackgroundDecoration from "./BackgroundDecoration";
+
 type SectionBackground = "default" | "surface" | "primary";
 
 type SectionSpacing = "md" | "lg" | "xl";
