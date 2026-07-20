@@ -1,40 +1,9 @@
+@import "../styles/tokens.css";
 @import "tailwindcss";
 
 /* ========================================
    Design Tokens
 ======================================== */
-
-:root {
-  /* Primary */
-  --color-primary: #146ab1;
-  --color-primary-light: #c5d7ed;
-
-  /* Secondary */
-  --color-secondary: #adce00;
-  --color-secondary-light: #deeb99;
-
-  /* Neutral */
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-border: #e5e7eb;
-
-  --color-text: #111827;
-  --color-text-light: #6b7280;
-
-  --container-width: 1280px;
-
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
-
-  --shadow-sm: 0 2px 8px rgba(0,0,0,.05);
-  --shadow-md: 0 8px 24px rgba(0,0,0,.08);
-  --shadow-lg: 0 24px 48px rgba(0,0,0,.12);
-
-  --transition-fast: 180ms ease;
-  --transition-normal: 280ms ease;
-}
 
 /* ========================================
    Base
