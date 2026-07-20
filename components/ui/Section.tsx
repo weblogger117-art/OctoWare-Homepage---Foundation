@@ -46,9 +46,9 @@ export default function Section({
         className
       )}
     >
-       {decoration && (
-        <BackgroundDecoration />
-    )}
+       {decoration !== "none" && (
+  <BackgroundDecoration variant={decoration} />
+)}
       <Container>{children}</Container>
     </section>
   );
