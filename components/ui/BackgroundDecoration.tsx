@@ -72,6 +72,11 @@ export default function BackgroundDecoration({
     />
   </>
 )}
+      {variant === "dots" && (
+  <>
+    {/* Punktmuster folgt später */}
+  </>
+)}
     </div>
   );
 }
