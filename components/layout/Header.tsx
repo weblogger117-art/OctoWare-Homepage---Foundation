@@ -1,37 +1,16 @@
-import Link from "next/link";
-
-import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import Container from "@/components/ui/Container";
 import Logo from "@/components/ui/Logo";
 
-const navigation = [
-  { label: "Start", href: "/" },
-  { label: "Plattform", href: "/plattform" },
-  { label: "Lösungen", href: "/loesungen" },
-  { label: "easy-Academy", href: "/academy" },
-  { label: "Referenzen", href: "/referenzen" },
-  { label: "Unternehmen", href: "/unternehmen" }
-];
+import Navigation from "./Navigation";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-xl">
       <Container className="flex h-[92px] items-center justify-between">
-       <Logo />
-        <nav aria-label="Hauptnavigation">
-          <ul className="flex items-center gap-8">
-            {navigation.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm font-medium transition-colors hover:text-[var(--color-primary)]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Logo />
+
+        <Navigation />
 
         <Button variant="secondary">
           Kontakt
