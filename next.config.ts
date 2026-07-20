@@ -3,14 +3,20 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
 
-  const nextConfig: NextConfig = {
-  reactStrictMode: true,
-
-  typedRoutes: true,
-
   images: {
     formats: ["image/avif", "image/webp"]
   },
+
+  poweredByHeader: false,
+
+  compress: true,
+
+  async headers() {
+    ...
+  }
+};
+
+export default nextConfig;
 
   poweredByHeader: false,
 
