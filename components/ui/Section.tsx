@@ -10,7 +10,11 @@ type SectionBackground = "default" | "surface" | "primary";
 
 type SectionSpacing = "md" | "lg" | "xl";
 
-type SectionDecoration = "none" | "glow" | "grid" | "dots";
+export type SectionDecoration =
+  | "none"
+  | "glow"
+  | "grid"
+  | "dots";
 
 type SectionProps = {
   children: ReactNode;
@@ -37,7 +41,7 @@ export default function Section({
   children,
   className,
   background = "default",
-  spacing = "lg"
+  spacing = "lg",
   decoration = "none",
 }: SectionProps) {
   return (
